@@ -28,7 +28,7 @@ namespace WpfAppLessonWPF5
         }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string fontName = ((sender as ComboBox).SelectedItem as TextBlock).Text;
+            string fontName = ((sender as ComboBox).SelectedItem as string);
             if (textBox != null)
             {
                 textBox.FontFamily = new FontFamily(fontName);
@@ -37,7 +37,7 @@ namespace WpfAppLessonWPF5
 
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            double fontSise = Convert.ToDouble(((sender as ComboBox).SelectedItem as TextBlock).Text);
+            double fontSise = Convert.ToDouble(((sender as ComboBox).SelectedItem));
             if (textBox != null)
             {
                 textBox.FontSize = fontSise;
