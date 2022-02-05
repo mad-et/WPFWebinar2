@@ -31,7 +31,8 @@
                               SelectedIndex="0" 
                               Width="200" 
                               SelectionChanged="ComboBox_SelectionChanged"
-                              ItemsSource="{StaticResource fonts}"/>
+                              ItemsSource="{StaticResource fonts}"
+                              Style="{DynamicResource ComboboxStyle}"/>
 
                     <ComboBox 
                         Margin="5" 
@@ -39,7 +40,8 @@
                         SelectedIndex="2"
                         Width="50" 
                         SelectionChanged="ComboBox_SelectionChanged_1"
-                        ItemsSource="{StaticResource sizes}"/>
+                        ItemsSource="{StaticResource sizes}"
+                        Style="{DynamicResource ComboboxStyle}"/>
 
 
                 </ToolBar>
@@ -61,6 +63,14 @@
                         <RadioButton Content="Черный" IsChecked="True" Checked="RadioButtonBlack_Checked" Foreground="Black"/>
                         <RadioButton Content="Красный" IsChecked="False" Checked="radioBottonRed_Checked" Foreground="Red"/>
                     </StackPanel>
+                    <ComboBox Name="themes" 
+                              Width="150"
+                              SelectedIndex="0"
+                              Margin="5" SelectionChanged="themes_SelectionChanged"
+                              Style="{DynamicResource ComboboxStyle}">
+                        <TextBlock Text="Светлая"/>
+                        <TextBlock Text="Темная"/>
+                    </ComboBox>
                 </ToolBar>
 
             </ToolBarTray>
